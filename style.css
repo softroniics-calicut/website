@@ -32,9 +32,9 @@ body{
 }
 
 .banner-txt{
-    font-family: 'Poppins', sans-serif;  
-font-weight: 300;
-    line-height: 22.59px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 27.59px;
     font-size: 17px;
 }
 
@@ -83,7 +83,8 @@ font-weight: 300;
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(45, 45, 45, 1);
+    ;
     z-index: 9;
   }
   
@@ -168,4 +169,31 @@ font-weight: 300;
     .area .area-parent-div{
         width: auto;
     }
+  }
+  .search-container{
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .search-container input {
+
+    padding: 12px 185px 15px 32px;
+    border: none;
+    background-color: #E1E1E1;
+    border-radius: 33px;
+
+
+  }
+
+ .search-container button{
+    position: absolute;
+    background-color: #E88F1B;
+    top: 5px;
+    right: 151px;
+    border: none;
+    padding: 33px 13px;
+    padding: 8px 19px;
+    /* padding: 14px; */
+    border-radius: 32px;
   }

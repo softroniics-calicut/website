@@ -68,49 +68,41 @@
 
 <script>
 
-  let contetnDiv = document.getElementById("banner-text")
+const contetnDiv = document.getElementById("banner-text");
 
+const updateClassList = () => {
+  const { classList } = contetnDiv;
+  const isLargeScreen = window.screen.width >= 900;
 
+  const classOperations = [
+    { class: "banner-text", condition: isLargeScreen },
+    { class: "fs-1", condition: !isLargeScreen },
+    { class: "fw-bold", condition: !isLargeScreen },
+  ];
 
+  classOperations.forEach(({ class: className, condition }) =>
+    classList.toggle(className, condition)
+  );
+};
 
-  if(window.screen.width>=900){
-    contetnDiv.classList.add("banner-text")
-      contetnDiv.classList.remove("fs-1")
-      contetnDiv.classList.remove("fw-bold")
-  }else{
-    contetnDiv.classList.remove("banner-text")
-  contetnDiv.classList.add("fs-1")
-  contetnDiv.classList.add("fw-bold")
-  }
+window.addEventListener("resize", updateClassList);
+updateClassList();
 
-
-  window.addEventListener("resize",()=>{
-    console.log('ys');
-    if(window.screen.width >= 900){
-
-      contetnDiv.classList.add("banner-text")
-      contetnDiv.classList.remove("fs-1")
-      contetnDiv.classList.remove("fw-bold")
-    }else{
-      contetnDiv.classList.remove("banner-text")
-      contetnDiv.classList.add("fs-1")
-      contetnDiv.classList.add("fw-bold")
-      
-    }
-     
-
-
-
-  })
-  
 
 </script>
+
 
   <div class="area">
     <div class="area-parent-div">
       <span class="banner-txt">Softroniics offers best development solutions through
         a dedicated team of trainers across a range of domains.</span>
     </div>
+  </div>
+
+  <div class="search-container">
+    <!-- Search form container-->
+    <input type="search" placeholder="Enter your email...">
+    <button>Get started</button>
   </div>
   
 
@@ -140,8 +132,8 @@
           <div class="row">
             <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-receipt"></i>
-              <h4>Corporis voluptates sit</h4>
-              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+             
+              <p style="color: white;">Softroniics offers a unique blend of domain expertise and industry experience through live projects to our clients. We stand out as a  development solution provider through our focus on learning with live experience in industry projects.</p>
             </div>
            
           </div>
